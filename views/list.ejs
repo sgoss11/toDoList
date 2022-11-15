@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="box">
+        <h1 id="heading"> <%= kindOfDay  %></h1>
+    </div>
+    <div class="box">
+      <% for(let i = 0; i < newListItems.length; i++){ %>
+        <div class="item">
+          <input type="checkbox" />
+          <p><%= newListItems[i] %></p>
+        </div>
+      <% } %>
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off"/>
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
+  </body>
+</html>
